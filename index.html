@@ -1,78 +1,290 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Primer pagina web</title>
-        <meta name= "description" content="Curriculum Web" />
-        <meta name="author" content="omar dario virili" />
-        <meta name="keywords" content="Curriculum web, para presentacion">
-        <link rel="stylesheet" href="estilos.css">
-    </head>
-    <body>
-      
-        <div class="agrupar">
-           
-        <header class="cabecera"> 
-            <h1>Curriculum Web</h1>
-        </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/tablet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/movil.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c65f2f1cc8.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <nav class="menu"> 
-            <ul> 
-                <li>Principal</li>
-                <li>Ayuda</li>
-                <li>Contacto</li>
-            </ul>
-        </nav>
+    <title>👩‍🎓Porfolio✨</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="#about">Sobre mi</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#academic">Formación</a></li>
+          <li><a href="#experience">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <!-- <address>omar.virili@gmail.com</address> -->
+        </ul>
+      </nav>
 
-        <section class="seccion"> 
-            <article>
-                <hgroup>
-                    <h1>Carta de Presentacion</h1>
-                    <h2>Quien Soy</h2>
-                </hgroup>
-                <time datetime="1-3-23">Publicado el 1-3-23</time>
-                <img src="logo.jpg">
-                <p>De apoco estoy recorriendo el camino de un desarrollador full stack. <small>Conocimientos en C++, C#, PHYTON, PHP, JS, HTML, CSS,</small>, <cite>distinctio odit eos pariatur architecto non ipsum?</cite>  Dolores, repudiandae asperiores. <span>Repellendus nostrum illo illum expedita eveniet</span>, voluptatem rerum!</p>
-                <footer>
-                    <p>Comentarios 23</p>
-                </footer>
-            </article>
-            <article>
-                <hgroup>
-                    <h1>Titulo del primer artículo</h1>
-                    <h2>Subtitulo del primer articulo</h2>
-                </hgroup>
-                <time datetime="7-5-20">Publicado el 7-5-20</time>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus tempora accusantium adipisci fugit! Eaque, corrupti mollitia labore, facere temporibus quos adipisci amet autem accusamus, esse quod iure omnis totam perspiciatis.</p>
+      <div class="burger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
 
-                <footer>
-                   <p>Comentarios 12</p>
-                </footer>
-                <address>
-                    <a href="http://google.com">Visita Google</a>
-                </address>
-            </article>
-    
-        </section>
-
-        <aside class="columna">
-            <blockquote cite="http://youtube.com">
-             Mensaje 1
-            </blockquote>
-
-            <blockquote cite="http://wikipedia.com">
-             Mensaje 2
-            </blockquote>
-        </aside>
-
-        <footer class="pie">
-            Derechos reservados 2010-2020
-        </footer>
-
+    <div class="arrow__home">
+      <a href="#header">
+        <img src="/assets/img/arrow-up.png" />
+        <p>Inicio</p>
+      </a>
+    </div>
+    <main>
+      <section id="header" class="header__hero">
+        <div class="header__perfil">
+          <h2>Soy Omar Virili</h2>
+          <p>Formación de base en Ingenieria en Sistema de Información.</p>
+          <p>
+            Gracias a las nuevas tecnologías de aprendizaje online, realize
+            cursos en Alura Latam, Argentina Program, Codo a Codo, etc.
+          </p>
+          <p>
+            Para Adquirir experiencia en trabajo en equipo, realice varias
+            simulación laborales gestionada por empresas como NoCountry, o Foo
+            Talent
+          </p>
         </div>
+        <img
+          class="img__perfil"
+          alt="Foto perfil"
+          src="assets/img/perfil.jpg"
+        />
+        <section class="hero">
+          <ul class="hero__redes">
+            <li>
+              <a href="https://github.com/odv144" target="_blank"
+                ><img src="/assets/img/arrow.png" /> Github</a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/omar-virili/" target="_blank"
+                ><img src="/assets/img/arrow.png" />LinkedIn</a
+              >
+            </li>
+            <!-- <li>
+              <a href="#" target="_blank"
+                ><img src="/assets/img/arrow.png" />Instagram</a
+              >
+            </li> -->
+            <li>
+              <a
+                href="/assets/img/Professional CV Resume_Hoja1.pdf"
+                target="_blank"
+              >
+                <img src="/assets/img/arrow.png" />
+                Curriculo
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="about" class="about">
+        <h2>Sobre mi</h2>
+        <ul>
+          <li>
+            Soy un apacionado por la programación, desde joven comencé a
+            programar, razón por la cual estudie Ingeniería en Sistema de
+            Información en la UTN.
+          </li>
+          <li>
+            Me gusta aprender nuevas tecnologías y herramientas para mejorar mi
+            habilidad en el desarrollo de Aplicaciones.
+          </li>
+          <li>
+            Recibido de Técnico Superior en Electrónica, genere mis primeras
+            relaciones laborales.
+          </li>
+          <li>
+            En la actualidad estoy realizando cursos de varios lenguajes
+            orientado a la web.
+          </li>
+        </ul>
+      </section>
+      <section id="skills" class="skills">
+        <article aria-labelledby="skills__heading">
+          <h2 class="skills__title" id="skills__heading">FRONT SKILLS</h2>
+          <ul class="skills__list">
+            <li>
+              <img class="skill__icon" src="/assets/img/html5.svg" />Html5
+            </li>
+            <li>
+              <img
+                class="skill__icon"
+                src="/assets/img/javascript.svg"
+              />JavaScript
+            </li>
 
-        
-    </body>
-    </html>
+            <li>
+              <img class="skill__icon" src="/assets/img/react.svg" />React
+            </li>
+            <li><img class="skill__icon" src="/assets/img/css3.svg" />Css</li>
 
+            <li>
+              <img class="skill__icon" src="/assets/img/django-1.svg" />Django
+            </li>
+          </ul>
+        </article>
+        <!-- skill para el back -->
+        <article>
+          <h2 class="skills__title">BACK SKILLS</h2>
+          <ul class="skills__list">
+            <li><img class="skill__icon" src="/assets/img/php.svg" />Php</li>
 
+            <li>
+              <img class="skill__icon" src="/assets/img/java-14.svg" />Java
+            </li>
+            <li>
+              <img class="skill__icon" src="/assets/img/python-5.svg" />Python
+            </li>
+            <li>
+              <img class="skill__icon" src="/assets/img/cplusplus.svg" />C++
+            </li>
+            <li><img class="skill__icon" src="/assets/img/csharp.svg" />C#</li>
+          </ul>
+        </article>
+        <!-- utilitarios adicionales -->
+        <article aria-labelledby="skills__heading">
+          <h2 class="skills__title" id="skills__heading">HERRAMIENTAS ADICIONALES</h2>
+          <ul class="skills__list">
+            <li>
+              <img class="skill__icon" src="/assets/img/mysql.svg" />MySql
+            </li>
+            <li>
+              <img  class="skill__icon" src="/assets/img/git.svg"/>Git
+            </li>
+
+            <li>
+              <img class="skill__icon" src="/assets/img/figma.svg" />Figma
+            </li>
+            <li><img class="skill__icon" src="/assets/img/Trello.png" />Trello</li>
+
+            <li>
+              <img class="skill__icon" src="/assets/img/Insomnia.svg" />Insomnia
+            </li>
+          </ul>
+        </article>
+
+      </section>
+      <section id="academic" class="academic">
+        <h2>Formación académica</h2>
+        <section class="academic__group">
+          <article class="group__article">
+            <figure class="academic__article__figure">
+              <img src="/assets/img/utn.jpg" />
+              <figcaption>UTN Facultad Regional Resistencia</figcaption>
+              <time>15-11-2024</time>
+            </figure>
+          </article>
+          <article class="group__article">
+            <figure class="academic__article__figure">
+              <img src="/assets/img/Oracle1.png" />
+              <figcaption>Formación Online Alura</figcaption>
+              <time>15-11-2024</time>
+            </figure>
+          </article>
+          <article class="group__article">
+            <figure class="academic__article__figure">
+              <img src="/assets/img/CAC.png" />
+              <figcaption>Codo a Codo 4.0</figcaption>
+              <time>15-11-2024</time>
+            </figure>
+          </article>
+        </section>
+      </section>
+
+      <section id="experience" class="experience">
+        <h2>Experiencia Profesional</h2>
+        <article class="expe__article">
+          <h3>Proyecto Encriptador</h3>
+          <figure class="expe__article__figure">
+            <img src="https://picsum.photos/300" alt="encriptador" />
+            <figcaption>
+              <p>Proyecto Encriptador de texto challenge de Alura latam</p>
+              <p>
+                Este proyecto lo realice como parte de un desafio para el curso
+                de Front-End dictado por alura Latam en conjunto con Orcle
+              </p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <!-- Proyecto Plataforma de cursos -->
+        <article class="expe__article">
+          <h3>Classmatte</h3>
+          <figure class="expe__article__figure">
+            <img src="https://picsum.photos/300" alt="encriptador" />
+            <figcaption>
+              <p>Plataforma de gestion de cursos online</p>
+              <p>
+                Plataforma desarrollada como parte de una simulación laboral
+                gestionada por NoCountry
+              </p>
+            </figcaption>
+          </figure>
+        </article>
+        <!-- Hotel Oceano -->
+        <article class="expe__article">
+          <h3>Oceano Hotel</h3>
+          <figure class="expe__article__figure">
+            <img src="https://picsum.photos/200" alt="encriptador" />
+            <figcaption>
+              <p>Sitio web de gestion Hotelera</p>
+              <p>
+                El sitio formo parte del la practica profesional de FouTalen
+              </p>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <p>¿Deseas contactarme?</p>
+        <p>Completa el siguiente formulario y me comunicaré a la brevedad.</p>
+        <form class="formulario">
+          <div class="form__group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form__group">
+            <label for="email">Correo Electronico:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form__group">
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required />
+          </div>
+          <div class="form__group">
+            <label for="message">Mensaje:</label>
+            <textarea
+              class="form__text__area"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <button class="form__btn" type="submit">Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Todos los derechos reservados</p>
+      <p>OdvSystem - Virili Omar</p>
+    </footer>
+  </body>
+</html>
