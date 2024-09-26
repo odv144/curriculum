@@ -1,13 +1,23 @@
 /*reglas movil*/
-@media screen and (max-width: 430px) {
+@media (max-width: 360px) {
     body {
       background-color: var(--fondoMovil);
-      margin: 0px;
-      padding: 0px;
+      width:100vw;
+     
+    }
+    main{
+      display: flex;
+      flex-direction: column;
+      width:100%;
+    }
+    main section{
+      width:100%;
+      box-sizing: border-box;
     }
     header {
       background-color:transparent;
     }
+
     .navegacion {
       display: none;
     }
@@ -26,31 +36,81 @@
       justify-content: center;
       align-items: center; 
       position: fixed;
-      right:10px;
-      top:20px;
+      left:10px;
+      top:10px;
       background-color: var(--header);
       color: #ffff;
       border-radius: 5px;
       width: 40px; 
       height: 40px;
-      margin: 0px; 
+      margin: 10px; 
       padding: 0px; 
       cursor: pointer;
     }
-   
+    .arrow__home{
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      border-radius: 5px;
+      background-color: #0041f3ae;
+     left:15px;
+      bottom: 50px;
+      text-align: center;  
+    }
     .header__hero{
         display:flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         background-color: transparent;
-        margin: 0px;
-        padding: 0px;
-    }
+        width: 100%;
+        padding: 3% 0;
+        height: none;
+        margin-bottom: 5rem;
+      }
     .header__perfil{
-        
+      
         display:flex;
         flex-direction: column;
         background-color: transparent;
+       
         margin: 0px;
-        padding: 0px;  
+        padding: 5px;  
+    }
+    .about{
+      display: flex;
+      flex-direction: column;
+      /* margin-top: 10rem; */
+    }
+    .about ul{
+     width: 100%;
+    }
+    .about ul li{
+      margin:0;
+      margin-top: 15px;
+    }
+
+    .skills__list li{
+      margin:0.5rem;
+    }
+
+    /*seccion academic */
+    .academic__group{
+      display:flex;
+      flex-direction: column;
+    
+    }
+    .group__article{
+      width: 100%;
+      padding:0;
+    }
+    /*seccion experiencia pro*/
+    .experience{
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .expe__article__figure{
+      display: flex;
+      flex-direction: column;
     }
   }

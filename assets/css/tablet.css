@@ -1,28 +1,117 @@
 /*reglas tablet*/
 @media (max-width: 768px) {
-    body {
-      background-color: var(--fondoTablet);
-    }
-    header {
-      width: 30%;
-      height: 20vh;
-      right: 0;
-      background-color:transparent;
-      color:#000;
-    }
-    .burger-menu{
-      display: none;
-      
-    }
-    .navegacion ul {
-      margin-top: 5%;
-      display: flex;
-      flex-direction: column;
-      width:100%;
-    }
-    .navegacion ul li {
-      min-width: 120px;
-     
-    }
+  body {
+    background-color: var(--fondoTablet);
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
   }
-  
+  header {
+    width: 30%;
+    height: 20vh;
+    right: 0;
+    background-color: transparent;
+    color: #000;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .navegacion ul {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .navegacion ul li {
+    min-width: 120px;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navegacion {
+    display: none;
+  }
+  .linea {
+    display: flex;
+    justify-content: center;
+    height: 4px;
+    width: 40px;
+    margin: 5px;
+    background-color: black;
+  }
+  .burger-menu {
+    display: flex;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: var(--header);
+    color: #ffff;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    padding: 0px;
+    cursor: pointer;
+  }
+
+  .header__hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: transparent;
+    padding: 3% 0;
+    margin-bottom: 5rem;
+  }
+  .header__perfil {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    margin: 0px;
+    padding: 2rem;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+  .about ul {
+    width: 100%;
+  }
+  .about ul li {
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  .skills__list li {
+    margin: 0.5rem;
+  }
+
+  /*seccion academic */
+  .academic__group {
+    display: flex;
+    flex-direction: column;
+  }
+  .group__article {
+    width: 100%;
+    padding: 0;
+  }
+  /*seccion experiencia pro*/
+  .experience {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .expe__article__figure {
+    display: flex;
+    flex-direction: column;
+  }
+}
