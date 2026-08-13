@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +18,16 @@
       src="https://kit.fontawesome.com/c65f2f1cc8.js"
       crossorigin="anonymous"
     ></script>
-
+    
     <title>👩‍🎓Porfolio✨</title>
   </head>
   <body>
+    <!--
+      Header como landmark de navegación global: queda fuera de <main> a
+      propósito, para que lectores de pantalla y usuarios de teclado puedan
+      saltar directo al contenido principal sin pasar por los 5 links del menú
+      en cada carga de página (patrón "skip navigation" implícito).
+    -->
     <header>
       <nav class="navegacion">
         <ul>
@@ -34,21 +40,28 @@
         </ul>
       </nav>
 
-      <div class="burger-menu">
+      <!-- <div class="burger-menu">
         <i class="fa-solid fa-bars"></i>
-      </div>
+      </div> -->
     </header>
 
     <div class="arrow__home">
       <a href="#header">
-        <img src="/assets/img/arrow-up.png" />
+        <img src="/assets/img/arrow-up.png" alt="" />
         <p>Inicio</p>
       </a>
     </div>
     <main>
+      <!--
+        Un único <h1> por página, ubicado en el hero: es el título real de
+        "quién soy". Cada sección siguiente (Sobre mi, Skills, Formación,
+        Proyectos, Contacto) usa <h2> como hijo directo del <h1>, y donde hay
+        subdivisiones internas (ej. cada proyecto en Experiencia) se baja a
+        <h3>, sin saltear niveles.
+      -->
       <section id="header" class="header__hero">
         <div class="header__perfil">
-          <h2>Soy Omar Virili</h2>
+          <h1>Soy Omar Virili</h1>
           <p>Formación de base en Ingenieria en Sistema de Información.</p>
           <p>
             Gracias a las nuevas tecnologías de aprendizaje online, realize
@@ -69,12 +82,12 @@
           <ul class="hero__redes">
             <li>
               <a href="https://github.com/odv144" target="_blank"
-                ><img src="/assets/img/arrow.png" /> Github</a
+                ><img src="/assets/img/arrow.png" alt="" /> Github</a
               >
             </li>
             <li>
               <a href="https://www.linkedin.com/in/omar-virili/" target="_blank"
-                ><img src="/assets/img/arrow.png" />LinkedIn</a
+                ><img src="/assets/img/arrow.png" alt="" />LinkedIn</a
               >
             </li>
             <!-- <li>
@@ -87,7 +100,7 @@
                 href="/assets/img/Professional CV Resume_Hoja1.pdf"
                 target="_blank"
               >
-                <img src="/assets/img/arrow.png" />
+                <img src="/assets/img/arrow.png" alt="" />
                 Curriculo
               </a>
             </li>
@@ -117,67 +130,73 @@
         </ul>
       </section>
       <section id="skills" class="skills">
-        <article aria-labelledby="skills__heading">
-          <h2 class="skills__title" id="skills__heading">FRONT SKILLS</h2>
+        <!--
+          Cada <article> es un grupo de skills independiente (Front, Back,
+          Herramientas). aria-labelledby conecta cada article con SU propio h2
+          (antes los tres compartían el mismo id, algo inválido en HTML), para
+          que un lector de pantalla anuncie "Front Skills" como nombre accesible
+          del bloque, en vez de agrupar los tres artículos como si fueran uno solo.
+        -->
+        <article aria-labelledby="skills__heading--front">
+          <h2 class="skills__title" id="skills__heading--front">FRONT SKILLS</h2>
           <ul class="skills__list">
             <li>
-              <img class="skill__icon" src="/assets/img/html5.svg" />Html5
+              <img class="skill__icon" src="/assets/img/html5.svg" alt="" />Html5
             </li>
             <li>
               <img
                 class="skill__icon"
                 src="/assets/img/javascript.svg"
+                alt=""
               />JavaScript
             </li>
 
             <li>
-              <img class="skill__icon" src="/assets/img/react.svg" />React
+              <img class="skill__icon" src="/assets/img/react.svg" alt="" />React
             </li>
-            <li><img class="skill__icon" src="/assets/img/css3.svg" />Css</li>
+            <li><img class="skill__icon" src="/assets/img/css3.svg" alt="" />Css</li>
 
             <li>
-              <img class="skill__icon" src="/assets/img/django-1.svg" />Django
+              <img class="skill__icon" src="/assets/img/django-1.svg" alt="" />Django
             </li>
           </ul>
         </article>
-        <!-- skill para el back -->
-        <article>
-          <h2 class="skills__title">BACK SKILLS</h2>
+        <article aria-labelledby="skills__heading--back">
+          <h2 class="skills__title" id="skills__heading--back">BACK SKILLS</h2>
           <ul class="skills__list">
-            <li><img class="skill__icon" src="/assets/img/php.svg" />Php</li>
+            <li><img class="skill__icon" src="/assets/img/php.svg" alt="" />Php</li>
 
             <li>
-              <img class="skill__icon" src="/assets/img/java-14.svg" />Java
+              <img class="skill__icon" src="/assets/img/java-14.svg" alt="" />Java
             </li>
             <li>
-              <img class="skill__icon" src="/assets/img/python-5.svg" />Python
+              <img class="skill__icon" src="/assets/img/python-5.svg" alt="" />Python
             </li>
             <li>
-              <img class="skill__icon" src="/assets/img/cplusplus.svg" />C++
+              <img class="skill__icon" src="/assets/img/cplusplus.svg" alt="" />C++
             </li>
-            <li><img class="skill__icon" src="/assets/img/csharp.svg" />C#</li>
+            <li><img class="skill__icon" src="/assets/img/csharp.svg" alt="" />C#</li>
           </ul>
         </article>
-        <!-- utilitarios adicionales -->
-        <article aria-labelledby="skills__heading">
-          <h2 class="skills__title" id="skills__heading">
+        <article aria-labelledby="skills__heading--extra">
+          <h2 class="skills__title" id="skills__heading--extra">
             HERRAMIENTAS ADICIONALES
           </h2>
           <ul class="skills__list">
             <li>
-              <img class="skill__icon" src="/assets/img/mysql.svg" />MySql
+              <img class="skill__icon" src="/assets/img/mysql.svg" alt="" />MySql
             </li>
-            <li><img class="skill__icon" src="/assets/img/git.svg" />Git</li>
+            <li><img class="skill__icon" src="/assets/img/git.svg" alt="" />Git</li>
 
             <li>
-              <img class="skill__icon" src="/assets/img/figma.svg" />Figma
+              <img class="skill__icon" src="/assets/img/figma.svg" alt="" />Figma
             </li>
             <li>
-              <img class="skill__icon" src="/assets/img/Trello.png" />Trello
+              <img class="skill__icon" src="/assets/img/Trello.png" alt="" />Trello
             </li>
 
             <li>
-              <img class="skill__icon" src="/assets/img/Insomnia.svg" />Insomnia
+              <img class="skill__icon" src="/assets/img/Insomnia.svg" alt="" />Insomnia
             </li>
           </ul>
         </article>
@@ -187,21 +206,21 @@
         <section class="academic__group">
           <article class="group__article">
             <figure class="academic__article__figure">
-              <img src="/assets/img/utn.jpg" />
+              <img src="/assets/img/utn.jpg" alt="Logo de la UTN Facultad Regional Resistencia" />
               <figcaption>UTN Facultad Regional Resistencia</figcaption>
               <time>15-11-2024</time>
             </figure>
           </article>
           <article class="group__article">
             <figure class="academic__article__figure">
-              <img src="/assets/img/Oracle1.png" />
+              <img src="/assets/img/Oracle1.png" alt="Logo de Oracle Alura Latam" />
               <figcaption>Formación Online Alura</figcaption>
               <time>15-11-2024</time>
             </figure>
           </article>
           <article class="group__article">
             <figure class="academic__article__figure">
-              <img src="/assets/img/CAC.png" />
+              <img src="/assets/img/CAC.png" alt="Logo de Codo a Codo 4.0" />
               <figcaption>Codo a Codo 4.0</figcaption>
               <time>15-11-2024</time>
             </figure>
@@ -214,7 +233,9 @@
         <article class="expe__article">
           <h3>Proyecto Encriptador</h3>
           <figure class="expe__article__figure">
-            <img src="https://picsum.photos/300" alt="encriptador" />
+            <a href="https://odv144.github.io/encrypter/" target="_blank">
+              <img src="/assets/img/encriptador.jpg" alt="Captura de pantalla del proyecto Encriptador de texto" />
+            </a>
             <figcaption>
               <p>Proyecto Encriptador de texto challenge de Alura latam</p>
               <p>
@@ -225,25 +246,26 @@
           </figure>
         </article>
 
-        <!-- Proyecto Plataforma de cursos -->
         <article class="expe__article">
-          <h3>Classmatte</h3>
+          <h3>Rafiaa Belle</h3>
           <figure class="expe__article__figure">
-            <img src="https://picsum.photos/300" alt="encriptador" />
+            <a href="https://odv144.github.io/rafiaabelle/index.html" target="_blank">
+              <img src="/assets/img/rafiabella.jpg" alt="Captura de pantalla del proyecto Classmatte" />
+            </a>
             <figcaption>
-              <p>Plataforma de gestion de cursos online</p>
+              <p>Nos propusimos ser el lugar en donde la estética y la salud se encuentran</p>
               <p>
-                Plataforma desarrollada como parte de una simulación laboral
-                gestionada por NoCountry
+                Sitio web de gestion de turnos para un centro de estetica, el proyecto formo parte del la practica profesional de FooTalen
               </p>
             </figcaption>
           </figure>
         </article>
-        <!-- Hotel Oceano -->
         <article class="expe__article">
           <h3>Oceano Hotel</h3>
           <figure class="expe__article__figure">
-            <img src="https://picsum.photos/200" alt="encriptador" />
+            <a href="https://hotel-rouge-iota.vercel.app/" target="_blank">
+              <img src="/assets/img/hotel.jpg" alt="Captura de pantalla del sitio Oceano Hotel" />
+             </a>
             <figcaption>
               <p>Sitio web de gestion Hotelera</p>
               <p>
@@ -258,6 +280,14 @@
         <p>¿Deseas contactarme?</p>
         <p>Completa el siguiente formulario y me comunicaré a la brevedad.</p>
         <form class="formulario">
+          <!--
+            Cada input tiene su <label for="..."> asociado por id (no solo
+            texto al lado): así, al hacer foco o click en el label, el
+            navegador enfoca el campo correspondiente, y un lector de
+            pantalla anuncia el nombre del campo aunque el usuario navegue
+            directo al input. "required" además dispara la validación nativa
+            del navegador sin necesitar JavaScript.
+          -->
           <div class="form__group">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required />
@@ -284,8 +314,9 @@
       </section>
     </main>
     <footer>
-      <p>&copy; 2024 Todos los derechos reservados</p>
+      <p>&copy; 2026 Todos los derechos reservados</p>
       <p>OdvSystem - Virili Omar</p>
     </footer>
+    <!-- <script src="//code.tidio.co/9k4ev8yatj18lbrhhrhuktvvpxmunmfj.js" async></script> -->
   </body>
 </html>
